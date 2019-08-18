@@ -31,26 +31,26 @@ aug1 = iaa.SomeOf((0, 1), [
   iaa.GammaContrast(per_channel=True, gamma=(0, 1.75))
 ])
 aug2 = iaa.SomeOf((2,7), [
-    iaa.Crop(px=(0,11)),
-    iaa.SaltAndPepper(p=(0,0.1)),
-    iaa.Dropout(p=(0, 0.2)),
+    iaa.Crop(px=(0,7)),
+    iaa.SaltAndPepper(p=(0,0.05)),
+    iaa.Dropout(p=(0, 0.1)),
     iaa.SomeOf((1,3),[
-        iaa.GaussianBlur(sigma=(1.2, 4)),
-        iaa.AverageBlur(k=(2, 5)),
-        iaa.MotionBlur(angle=(72, 216), k=(3,12))
+        iaa.GaussianBlur(sigma=(1.2, 2)),
+        iaa.AverageBlur(k=(1, 3)),
+        iaa.MotionBlur(angle=(36, 108), k=(3,6))
     ]),
     
     iaa.AdditiveGaussianNoise(scale=(0, 0.01*255)),
     # iaa.Sharpen(alpha=(0.0, 1.0), lightness=(0.2, 1.0)),
     # iaa.Emboss(alpha=(0.0, 1.0), strength=(0.5, 1.0)),
 
-    iaa.Add((-60, 60)),
-    iaa.AddElementwise((-20, 20)),
-    iaa.MultiplyElementwise((.8, 1.2)),
+    iaa.Add((-30, 30)),
+    iaa.AddElementwise((-10, 10)),
+    iaa.MultiplyElementwise((.95, 1.05)),
     
-    iaa.ContrastNormalization((0.5, 1.5)),
+    iaa.ContrastNormalization((0.8, 1.2)),
     iaa.Affine(shear=(-5, 5)),
-    iaa.Affine(rotate=(-3, 3))
+    iaa.Affine(rotate=(-4, 4))
 ], random_order=False)
 
 # aug1 = iaa.SomeOf((0, 1), [

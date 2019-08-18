@@ -22,7 +22,7 @@ import tensorflow as tf
 from tensorflow.contrib import slim
 import logging
 
-DEFAULT_DATASET_DIR = os.path.join(os.path.dirname(__file__), 'data/fsns')
+DEFAULT_DATASET_DIR = "datasets/data/captcha"
 
 # The dataset configuration, should be used only as a default value.
 DEFAULT_CONFIG = {
@@ -42,10 +42,10 @@ DEFAULT_CONFIG = {
         }
     },
     'charset_filename': 'charset_size=134.txt',
-    'image_shape': (75, 225, 3),
-    'num_of_views': 4,
-    'max_sequence_length': 37,
-    'null_code': 133,
+    'image_shape': (75, 150, 3),
+    'num_of_views': 1,
+    'max_sequence_length': 6,
+    'null_code': 0,
     'items_to_descriptions': {
         'image': 'A [150 x 600 x 3] color image.',
         'label': 'Characters codes.',

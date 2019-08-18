@@ -1,0 +1,11 @@
+tests/
+*.pyc
+datasets/data
+*ipynb*
+checkpoint_*
+data_synthesize/test/
+data_synthesize/data/test.py
+data_synthesize/test.py
+data_synthesize/data/font-full
+checkpoint*
+datasets/real-img-data
